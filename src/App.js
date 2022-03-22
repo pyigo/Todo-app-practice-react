@@ -18,13 +18,13 @@ class App extends Component {
         <ThirdComponent></ThirdComponent> */}
 
         {/* Set one as the default value of counter number one by defining a default props. */}
-        <Counter by={1} />
+        <Counter />
 
         {/* we will be reusing our counter component and include them in the parent icomponent which is App 
         and each counter component will have a diif increment value and update the variable of the component as we click on the button.  */}
         {/* Because the increment vale will not change, we can use props   */}
-        <Counter by={5} />
-        <Counter by={10} />
+        {/* <CounterButton by={5} />
+        <CounterButton by={10} /> */}
 
       </div>
     );
