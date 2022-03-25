@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, useNavigate, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { Routes } from "react-router-dom";
 import withNavigation from "./WithNavigation";
 
@@ -15,6 +15,8 @@ class Todoapp extends Component {
                     <Route path="/" element = {<LoginComponentWithNavigation/>} />
                     <Route path="/login" element ={<LoginComponentWithNavigation/>} />
                     <Route path="/Welcome" element ={<WelcomeComponent/>} />
+                    <Route element= {<ErrorComponent/>}/>
+                    <Route path ="*" element ={<ErrorComponent/>} />
                 </Routes>
                 </Router>
                 {/* <LoginComponent />
@@ -30,6 +32,10 @@ class WelcomeComponent extends Component{
             <div>Welcome in28minutes</div>
         )
     }
+}
+
+function ErrorComponent(){
+    return <div>Error Occurred</div>
 }
 
 class LoginComponent extends Component {
